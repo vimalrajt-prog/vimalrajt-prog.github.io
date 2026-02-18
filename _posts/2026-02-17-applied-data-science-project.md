@@ -1,6 +1,6 @@
 ---
 layout: post
-author: Name
+author: Vimalraj T
 title: "Applied Data Science Project Documentation"
 categories: ITD214
 ---
