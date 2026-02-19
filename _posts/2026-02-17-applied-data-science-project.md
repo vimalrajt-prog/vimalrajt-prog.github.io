@@ -13,7 +13,8 @@ Our team's overall business goal is "To analyze customer purchasing behavior, sa
 
 **My Individual Objective (Objective 1 – Customer Segmentation):**  
 To segment customers based on purchasing behavior using transactional and monetary features derived from sales data, and identify distinct customer profiles to support targeted marketing, pricing, and customer engagement strategies.
-.
+
+---
 
 ## Work Accomplished
 I successfully:
@@ -37,6 +38,7 @@ I successfully:
 
 This work supports the team’s overall project direction by providing a data-driven segmentation framework for decision support.
 
+---
 
 ## Data Preparation
 
@@ -76,9 +78,9 @@ This work supports the team’s overall project direction by providing a data-dr
 ![Spend Buckets](/assets/img/itd214/spend_bucket_bar.png)
 ![Correlation Heatmap](/assets/img/itd214/corr_heatmap.png)
 
+---
 
 ## Modelling
-
 
 ### Clustering Features Used
 The segmentation used the following scaled customer-level features:
@@ -114,9 +116,9 @@ To align with assessment expectations, four clustering algorithms were evaluated
 **Best Performer: K-Means**  
 K-Means achieved the most balanced performance across all metrics and produced stable, interpretable segments suitable for business use.
 
+---
 
 ## Evaluation
-
 
 ### PCA Visualization (2D Projection)
 PCA was used solely to visualize clustering structure (not for training).
@@ -134,6 +136,7 @@ The K-Means solution was validated for stability across multiple random seeds:
 
 This confirms the segmentation is robust and not sensitive to centroid initialization.
 
+---
 
 ## Cluster Interpretation (Business Profiles)
 
@@ -169,6 +172,7 @@ An interactive widget interface was developed to:
 
 ![ipywidgets Demo](/assets/img/itd214/widgets_demo.png)
 
+---
 
 ## Recommendations and Analysis (Business Insights)
 
@@ -187,9 +191,7 @@ This segment represents the most valuable customers who contribute high revenue 
 - Prioritize personalized recommendations over heavy discounting
 - Offer premium service options (fast delivery, priority support)
 
----
-
-### Segment 2: Promotion-Driven Customers
+#### Segment 2: Promotion-Driven Customers
 **Behavioral Signals**
 - Lowest average order value and lowest purchase frequency  
 - Highest discount usage and highest shipping cost ratio  
@@ -202,9 +204,8 @@ Customers in this segment are highly price-sensitive and respond most to promoti
 - Free-shipping thresholds to reduce shipping friction
 - Bundle promotions (buy-more-save-more) to increase basket size
 
----
 
-### Segment 3: Frequent Value Buyers
+#### Segment 3: Frequent Value Buyers
 **Behavioral Signals**
 - Highest order frequency  
 - Strong total spend accumulated through repeated purchases  
@@ -218,9 +219,8 @@ A reliable repeat-purchase segment that contributes steady revenue through frequ
 - Subscription/replenishment programs for repeat purchase items
 - Loyalty point accelerators to encourage higher basket size
 
----
 
-### Segment 4: Core Regular Customers
+#### Segment 4: Core Regular Customers
 **Behavioral Signals**
 - Moderate spend and moderate purchase frequency  
 - Balanced discount usage and modest shipping sensitivity  
@@ -233,9 +233,8 @@ A stable “middle” segment with strong potential to be upgraded into higher v
 - Tier-based incentives to drive higher order value and repeat purchasing
 - Improve customer experience (delivery transparency, service responsiveness)
 
----
 
-### Strategic Impact Summary
+#### Strategic Impact Summary
 Overall, the segmentation enables:
 - **More efficient marketing allocation** (right offer to the right segment)
 - **Reduced unnecessary discounting** (protect margin by targeting promotions)
