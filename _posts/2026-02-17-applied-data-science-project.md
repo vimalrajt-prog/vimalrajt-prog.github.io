@@ -140,17 +140,13 @@ This confirms the segmentation is robust and not sensitive to centroid initializ
 
 
 ### Code Snippets
-A. Feature Engineering Code (Short Snippet)
-To constructed meaningful behavioral features.
+#### A. Feature Engineering (to constructed meaningful behavioral features)
 
-B. Feature Scaling
-To show correct ML Processsing
+#### B. Feature Scaling  (to show correct ML processsing)
 
-C. Multi-Model Comparison
-To demonstrate model evaluation
+#### C. Multi-Model Comparison (to demonstrate model evaluation)
 
-D. Demonstrates model evaluation
-To show advanced validation
+#### D. Model Evaluation (to show advanced validation)
 
 
 ## Cluster Interpretation (Business Profiles)
