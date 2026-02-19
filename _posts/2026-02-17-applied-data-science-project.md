@@ -39,7 +39,7 @@ This work supports the team’s overall project direction by providing a data-dr
 
 ---
 
-### Data Preparation
+## Data Preparation
 
 
 ### Dataset Overview
@@ -78,8 +78,7 @@ This work supports the team’s overall project direction by providing a data-dr
 ![Spend Buckets](/assets/img/itd214/spend_bucket_bar.png)
 ![Correlation Heatmap](/assets/img/itd214/corr_heatmap.png)
 
-### Modelling
-
+## Modelling
 
 ### Clustering Features Used
 The segmentation used the following scaled customer-level features:
@@ -115,10 +114,8 @@ To align with assessment expectations, four clustering algorithms were evaluated
 **Best Performer: K-Means**  
 K-Means achieved the most balanced performance across all metrics and produced stable, interpretable segments suitable for business use.
 
----
 
-
-### Evaluation
+## Evaluation
 
 
 ### PCA Visualization (2D Projection)
@@ -137,7 +134,6 @@ The K-Means solution was validated for stability across multiple random seeds:
 
 This confirms the segmentation is robust and not sensitive to centroid initialization.
 
----
 
 ## Cluster Interpretation (Business Profiles)
 
@@ -284,40 +280,36 @@ Overall, the segmentation enables:
 5. **Advanced segmentation methods**
    - Explore autoencoder-based clustering or spectral clustering for potentially improved separation in high-dimensional behavior space.
 
----
-
-
----
 
 ## AI Ethics
 Discuss the potential data science ethics issues (privacy, fairness, accuracy, accountability, transparency) in your project. 
 
-Pricacy and Data Protection:
+### Pricacy and Data Protection:
 - Customer data is anonymized and analyzed at ID-level.
 - No personally identifiable information (PII) is used.
 - Segmentation is behavior-based, not identity-based.
 - No sensitive attributes (race, gender, religion) are included.
 
-Fairness and Bias:
+### Fairness and Bias:
 The model segments customers based on purchasing behavior.
 Historical purchasing data may reflect:
 - Income inequality
 - Access disparities
 - Promotional targeting bias
 
-Risk:
+**Risk:**
 Low-spend customers could be unfairly deprioritized in marketing strategies.
 
-Mitigation:
+**Mitigation:**
 Segmentation should support service personalization, not discrimination.
 
 
-Transparency and Explainability.
+### Transparency and Explainability.
 - K-Means clustering is interpretable.
 - Feature contributions are transparent (log_total_spend, frequency, etc.).
 - Business labels are derived from measurable behavioral patterns.
 
-Accuracy and Model Realiability.
+### Accuracy and Model Realiability.
 Although clustering is unsupervised, reliability was validated through:
 - Multi-model comparison (K-Means, MiniBatch, GMM, DBSCAN)
 - Multiple evaluation metrics (Silhouette, DB, CH)
@@ -328,11 +320,11 @@ This ensures:
 - Robustness
 - Stability across random initializations
 
-Important clarification:
+**Important clarification:**
 Clustering does not produce "accuracy" like classification models. Instead, reliability is assessed through stability and internal validation metrics.
 
 
-Responsible Business Use
+### Responsible Business Use
 Segmentation should:
 - Enhance customer experience
 - Improve marketing efficiency
@@ -343,14 +335,15 @@ Segmentation should:
 
 This project demonstrated an end-to-end customer segmentation workflow using Amazon sales transactions, covering data preparation, feature engineering, clustering model comparison, stability validation, and business interpretation.
 
-Key achievements:
+### Key achievements:
 - Constructed customer-level behavioral features capturing spend, frequency, discount sensitivity, and shipping impact
 - Evaluated multiple clustering approaches (K-Means, MiniBatchKMeans, GMM, DBSCAN) using standard internal validation metrics
 - Selected **K-Means** as the final model due to the best balance of performance, interpretability, and stability
 - Confirmed robustness through a stability check with **high ARI consistency (~0.996)**
 - Produced actionable segment-driven recommendations to support targeted marketing strategies and revenue optimization
 
-Overall, the segmentation provides a practical framework for businesses to tailor engagement strategies, allocate promotions more effectively, and improve customer retention outcomes.
+### Overall Summary
+The segmentation provides a practical framework for businesses to tailor engagement strategies, allocate promotions more effectively, and improve customer retention outcomes.
 
 ## Source Codes and Datasets
 Upload your model files and dataset into a GitHub repo and add the link here. 
