@@ -37,10 +37,8 @@ I successfully:
 
 This work supports the team’s overall project direction by providing a data-driven segmentation framework for decision support.
 
----
 
 ## Data Preparation
-
 
 ### Dataset Overview
 - Dataset: Amazon Sales transactional data  
@@ -78,7 +76,9 @@ This work supports the team’s overall project direction by providing a data-dr
 ![Spend Buckets](/assets/img/itd214/spend_bucket_bar.png)
 ![Correlation Heatmap](/assets/img/itd214/corr_heatmap.png)
 
+
 ## Modelling
+
 
 ### Clustering Features Used
 The segmentation used the following scaled customer-level features:
