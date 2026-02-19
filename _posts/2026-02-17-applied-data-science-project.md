@@ -129,6 +129,8 @@ The K-Means solution was validated for stability across multiple random seeds:
 - Internal metrics showed negligible variance (Silhouette/DB/CH)
 - ARI results were near perfect, indicating consistent cluster assignments across runs
 
+![PCA Cluster Projection](/assets/img/itd214/pca_clusters.png)
+
 **Result Summary**
 - Mean ARI ≈ 0.996  
 - Min ARI ≈ 0.990  
@@ -136,7 +138,20 @@ The K-Means solution was validated for stability across multiple random seeds:
 
 This confirms the segmentation is robust and not sensitive to centroid initialization.
 
----
+
+### Code Snippets
+A. Feature Engineering Code (Short Snippet)
+To constructed meaningful behavioral features.
+
+B. Feature Scaling
+To show correct ML Processsing
+
+C. Multi-Model Comparison
+To demonstrate model evaluation
+
+D. Demonstrates model evaluation
+To show advanced validation
+
 
 ## Cluster Interpretation (Business Profiles)
 
@@ -166,9 +181,8 @@ The final solution produced **four distinct customer segments**:
 ## Interactive Exploration (ipywidgets)
 
 An interactive widget interface was developed to:
-- Select a cluster and view summary statistics
+- explore dynamically to display summary statistics and visual comparisons between cluster-level and overall feature distributions, supporting explainability and stakeholder interpretation.
 - Filter customers by spend bucket and discount usage
-- Support explainability and stakeholder exploration
 
 ![ipywidgets Demo](/assets/img/itd214/widgets_demo.png)
 
@@ -261,7 +275,6 @@ Overall, the segmentation enables:
 5. **Static segmentation**
    - Customers may shift between segments over time; the current model reflects a snapshot and may require periodic re-training.
 
----
 
 ### Future Work
 1. **Add time-based features (RFM segmentation)**
@@ -279,6 +292,7 @@ Overall, the segmentation enables:
 5. **Advanced segmentation methods**
    - Explore autoencoder-based clustering or spectral clustering for potentially improved separation in high-dimensional behavior space.
 
+---
 
 ## AI Ethics
 Discuss the potential data science ethics issues (privacy, fairness, accuracy, accountability, transparency) in your project. 
