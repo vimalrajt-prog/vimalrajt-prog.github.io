@@ -384,5 +384,9 @@ Refer to the file repository and datasets as follows:
 - [Datasets](https://drive.google.com/drive/folders/1nrhacb9hgG9zPKkvjRXffqAfok39gS_d?usp=drive_link)
   (unable to upload to github since the its too large, so provided google drive link)
 
+- In caae if you are not able to access the google drive, you can also get the datasets from the public Kaggle Data Sets portal:
+[Amazon Sales Dataset](https://www.kaggle.com/datasets/rohiteng/amazon-sales-dataset)
+[Amazon Product Reviews](https://www.kaggle.com/datasets/arhamrumi/amazon-product-reviews)
+
 
 
