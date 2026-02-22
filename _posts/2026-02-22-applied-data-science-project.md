@@ -69,15 +69,19 @@ This work supports the team’s overall project direction by providing a data-dr
 
 #### Visuals (Sample Images)
 - Distribution of Total Amount (order value)
+  
 <img width="355" height="228" alt="totalamount_hist" src="https://github.com/user-attachments/assets/64f32f61-d9b2-4ab6-85a0-b3f26a79b72e" />
 
 - Discount distribution
+  
 <img width="364" height="223" alt="discount_distribution" src="https://github.com/user-attachments/assets/585c89c1-9b3a-4436-9d87-5ed273d6987e" />
 
 - Spend bucket distribution
+  
 <img width="363" height="287" alt="spend_bucket_bar" src="https://github.com/user-attachments/assets/b2b522a6-2ec0-4103-9619-c20a2ad7e97f" />
 
 - Feature correlation heatmap
+  
 <img width="424" height="319" alt="corr_heatmap" src="https://github.com/user-attachments/assets/6d0b3f78-f96f-4907-a57a-5afdfa31cd32" />
 
 ---
@@ -373,6 +377,10 @@ The segmentation provides a practical framework for businesses to tailor engagem
 ---
 
 ## Source Codes and Datasets
-Upload your model files and dataset into a GitHub repo and add the link here. 
-https://github.com/vimalrajt-prog/itd214_project
+Refer to the file repository and datasets as follows:
+- [File repository](https://github.com/vimalrajt-prog/itd214_project)
+- [Datasets](https://drive.google.com/drive/folders/1nrhacb9hgG9zPKkvjRXffqAfok39gS_d?usp=drive_link)
+  (unable to upload to github since the its too large, so provided google drive link)
+
+
 
