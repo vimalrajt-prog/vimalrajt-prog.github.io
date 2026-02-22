@@ -67,22 +67,18 @@ This work supports the team’s overall project direction by providing a data-dr
 4. **Feature Scaling**
    - StandardScaler applied to clustering input features
 
-#### Visuals (Add Images)
+#### Visuals (Sample Images)
 - Distribution of Total Amount (order value)
-- Discount distribution
-- Spend bucket distribution
-- Feature correlation heatmap
-
-**Sample Images:**
-![TotalAmount Distribution](/assets/img/itd214/totalamount_hist.png)
-
-![Spend Buckets](/assets/img/itd214/spend_bucket_bar.png)
-![Correlation Heatmap](/assets/img/itd214/corr_heatmap.png)
-
 <img width="355" height="228" alt="totalamount_hist" src="https://github.com/user-attachments/assets/64f32f61-d9b2-4ab6-85a0-b3f26a79b72e" />
 
-![TotalAmount Distribution]("https://github.com/user-attachments/assets/64f32f61-d9b2-4ab6-85a0-b3f26a79b72e")
+- Discount distribution
+<img width="364" height="223" alt="discount_distribution" src="https://github.com/user-attachments/assets/585c89c1-9b3a-4436-9d87-5ed273d6987e" />
 
+- Spend bucket distribution
+<img width="363" height="287" alt="spend_bucket_bar" src="https://github.com/user-attachments/assets/b2b522a6-2ec0-4103-9619-c20a2ad7e97f" />
+
+- Feature correlation heatmap
+<img width="424" height="319" alt="corr_heatmap" src="https://github.com/user-attachments/assets/6d0b3f78-f96f-4907-a57a-5afdfa31cd32" />
 
 ---
 
@@ -100,10 +96,11 @@ The segmentation used the following scaled customer-level features:
 ### Selecting K (Number of Clusters)
 K was selected using:
 - **Elbow Method** (inertia vs k)
-- **Silhouette Score** (cluster separation quality)
+  <img width="410" height="278" alt="elbow_plot" src="https://github.com/user-attachments/assets/d8d06bfd-727a-4b5d-81c6-03e5f2f738eb" />
 
-![Elbow Method](/assets/img/itd214/elbow_plot.png)
-![Silhouette vs K](/assets/img/itd214/silhouette_plot.png)
+- **Silhouette Score** (cluster separation quality)
+<img width="346" height="220" alt="silhouette_plot" src="https://github.com/user-attachments/assets/0f14d53e-aa7d-47be-a7de-bd4ae369e769" />
+
 
 ### Models Compared (4-model evaluation)
 To align with assessment expectations, four clustering algorithms were evaluated on a representative sample:
@@ -117,7 +114,8 @@ To align with assessment expectations, four clustering algorithms were evaluated
 - Davies–Bouldin Index (↓ better)
 - Calinski–Harabasz Score (↑ better)
 
-![Model Comparison Metrics](/assets/img/itd214/model_compare_bar.png)
+<img width="426" height="110" alt="model_compare_chart" src="https://github.com/user-attachments/assets/e28ea880-0e14-4cea-9732-d813c705a0ea" />
+
 
 **Best Performer: K-Means**  
 K-Means achieved the most balanced performance across all metrics and produced stable, interpretable segments suitable for business use.
@@ -128,31 +126,35 @@ K-Means achieved the most balanced performance across all metrics and produced s
 
 ### PCA Visualization (2D Projection)
 PCA was used solely to visualize clustering structure (not for training).
-![PCA Cluster Projection](/assets/img/itd214/pca_clusters.png)
+<img width="400" height="278" alt="pca_clusters" src="https://github.com/user-attachments/assets/b0eca97a-13bd-4acf-83be-a00d8241bf7f" />
 
 ### Cluster Stability Check
 The K-Means solution was validated for stability across multiple random seeds:
 - Internal metrics showed negligible variance (Silhouette/DB/CH)
 - ARI results were near perfect, indicating consistent cluster assignments across runs
 
-![PCA Cluster Projection](/assets/img/itd214/pca_clusters.png)
-
 **Result Summary**
 - Mean ARI ≈ 0.996  
 - Min ARI ≈ 0.990  
 - Max ARI = 1.000  
 
-This confirms the segmentation is robust and not sensitive to centroid initialization.
+<img width="403" height="221" alt="stability_check" src="https://github.com/user-attachments/assets/36c9f60d-db69-4c6b-a3bd-1962ecbeee6f" />
 
+This confirms the segmentation is robust and not sensitive to centroid initialization.
 
 ### Code Snippets
 #### A. Feature Engineering (to constructed meaningful behavioral features)
+<img width="433" height="198" alt="Feature_Engineering_code_snippet" src="https://github.com/user-attachments/assets/baf1cf2a-4afb-49e9-acb0-1e74f079b712" />
 
 #### B. Feature Scaling  (to show correct ML processsing)
+<img width="196" height="171" alt="Feature_scaling_code_snippet" src="https://github.com/user-attachments/assets/8f29b9e5-0a19-4a03-8a9c-179b5191acc7" />
 
 #### C. Multi-Model Comparison (to demonstrate model evaluation)
 
+<img width="290" height="105" alt="multi_model_comparison_code_snippet" src="https://github.com/user-attachments/assets/8f516e20-f30e-40ba-8962-7415253ce1a0" />
+
 #### D. Model Evaluation (to show advanced validation)
+<img width="324" height="147" alt="stability_check_code_snippet" src="https://github.com/user-attachments/assets/dbce2901-7d2a-4895-9b3e-ad01c322100d" />
 
 
 ## Cluster Interpretation (Business Profiles)
@@ -175,8 +177,9 @@ The final solution produced **four distinct customer segments**:
    - Moderate spend and frequency, growth potential  
    - Strategy: Convert to higher value via engagement and threshold offers
 
-![Cluster Profiles](/assets/img/itd214/cluster_profile_bar.png)
-![Spend Bucket by Cluster](/assets/img/itd214/spend_bucket_by_cluster.png)
+<img width="499" height="282" alt="cluster_profile_bar" src="https://github.com/user-attachments/assets/722f9bb8-2fc0-46e5-909a-b9b9e09f4f3c" />
+
+<img width="482" height="259" alt="spend_bucket_by_cluster" src="https://github.com/user-attachments/assets/e07b53c6-b726-4219-bec8-4c1a176fc19a" />
 
 ---
 
@@ -186,7 +189,12 @@ An interactive widget interface was developed to:
 - explore dynamically to display summary statistics and visual comparisons between cluster-level and overall feature distributions, supporting explainability and stakeholder interpretation.
 - Filter customers by spend bucket and discount usage
 
-![ipywidgets Demo](/assets/img/itd214/widgets_demo.png)
+<img width="337" height="149" alt="widgets_clusterview" src="https://github.com/user-attachments/assets/53e65db9-08e2-4f9d-9749-1f3f56f97828" />
+
+<img width="462" height="158" alt="widgets_spendbucket" src="https://github.com/user-attachments/assets/3a9f9025-4b09-47b3-86db-c4edcca2ed5c" />
+
+<img width="477" height="248" alt="widgets_clusterview_chart" src="https://github.com/user-attachments/assets/918de556-5ddc-4477-8a5e-a0df43693e76" />
+
 
 ---
 
@@ -297,7 +305,7 @@ Overall, the segmentation enables:
 ---
 
 ## AI Ethics
-Here we discuss the potential data science ethics issues (privacy, fairness, accuracy, accountability, transparency) in our project. 
+The potential data science ethics issues (privacy, fairness, accuracy, accountability, transparency) in our project. 
 
 ### Pricacy and Data Protection:
 - Customer data is anonymized and analyzed at ID-level.
@@ -366,3 +374,5 @@ The segmentation provides a practical framework for businesses to tailor engagem
 
 ## Source Codes and Datasets
 Upload your model files and dataset into a GitHub repo and add the link here. 
+https://github.com/vimalrajt-prog/itd214_project
+
