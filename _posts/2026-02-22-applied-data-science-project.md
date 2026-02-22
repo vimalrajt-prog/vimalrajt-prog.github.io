@@ -73,10 +73,16 @@ This work supports the team’s overall project direction by providing a data-dr
 - Spend bucket distribution
 - Feature correlation heatmap
 
-**Example Images (replace filenames with your own):**
+**Sample Images:**
 ![TotalAmount Distribution](/assets/img/itd214/totalamount_hist.png)
+
 ![Spend Buckets](/assets/img/itd214/spend_bucket_bar.png)
 ![Correlation Heatmap](/assets/img/itd214/corr_heatmap.png)
+
+<img width="355" height="228" alt="totalamount_hist" src="https://github.com/user-attachments/assets/64f32f61-d9b2-4ab6-85a0-b3f26a79b72e" />
+
+![TotalAmount Distribution]("https://github.com/user-attachments/assets/64f32f61-d9b2-4ab6-85a0-b3f26a79b72e")
+
 
 ---
 
@@ -291,7 +297,7 @@ Overall, the segmentation enables:
 ---
 
 ## AI Ethics
-Discuss the potential data science ethics issues (privacy, fairness, accuracy, accountability, transparency) in your project. 
+Here we discuss the potential data science ethics issues (privacy, fairness, accuracy, accountability, transparency) in our project. 
 
 ### Pricacy and Data Protection:
 - Customer data is anonymized and analyzed at ID-level.
@@ -340,6 +346,8 @@ Segmentation should:
 - Avoid penalizing customers solely based on spending capacity
 - Be monitored continuously for drift
 
+---
+
 ## Conclusion
 
 This project demonstrated an end-to-end customer segmentation workflow using Amazon sales transactions, covering data preparation, feature engineering, clustering model comparison, stability validation, and business interpretation.
@@ -353,6 +361,8 @@ This project demonstrated an end-to-end customer segmentation workflow using Ama
 
 ### Overall Summary
 The segmentation provides a practical framework for businesses to tailor engagement strategies, allocate promotions more effectively, and improve customer retention outcomes.
+
+---
 
 ## Source Codes and Datasets
 Upload your model files and dataset into a GitHub repo and add the link here. 
