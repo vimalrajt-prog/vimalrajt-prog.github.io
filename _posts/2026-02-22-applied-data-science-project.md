@@ -100,9 +100,11 @@ The segmentation used the following scaled customer-level features:
 ### Selecting K (Number of Clusters)
 K was selected using:
 - **Elbow Method** (inertia vs k)
+  
   <img width="410" height="278" alt="elbow_plot" src="https://github.com/user-attachments/assets/d8d06bfd-727a-4b5d-81c6-03e5f2f738eb" />
 
 - **Silhouette Score** (cluster separation quality)
+  
 <img width="346" height="220" alt="silhouette_plot" src="https://github.com/user-attachments/assets/0f14d53e-aa7d-47be-a7de-bd4ae369e769" />
 
 
