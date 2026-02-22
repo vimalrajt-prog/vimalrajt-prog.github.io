@@ -381,6 +381,13 @@ The segmentation provides a practical framework for businesses to tailor engagem
 ## Source Codes and Datasets
 Refer to the file repository and datasets as follows:
 - [File repository](https://github.com/vimalrajt-prog/itd214_project)
+  - Business_Understanding_and_Project_Plan -->  00_Business_Understanding_and_Project_Plan.ipynb
+  - 7279206Q - Objective 1 - Main code file -->  7279206Q_Sales_Customer_Segmentation.ipynb
+  - Cleaned & Transformed Customer Segment Data -->  customer_segments.parquet
+  - Customer Clustered Profile Results Data -->  customer_cluster_profiles.csv
+  - Raw sales data ydata profile report -->  sales_profile_report.html
+  - Team 3 Project Final Presentation Deck --> ITD24 Project - Final Report - Amazon Sales - Team 3.pptx
+
 - [Datasets at Local Google Drive](https://drive.google.com/drive/folders/1nrhacb9hgG9zPKkvjRXffqAfok39gS_d?usp=drive_link)
   (unable to upload to github since the its too large, so provided google drive link)
 
