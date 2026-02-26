@@ -209,6 +209,16 @@ The final solution produced **four distinct customer segments**:
 
 <img width="482" height="259" alt="spend_bucket_by_cluster" src="https://github.com/user-attachments/assets/e07b53c6-b726-4219-bec8-4c1a176fc19a" />
 
+**Behavioral Gaps across Customer Segments**
+
+<img width="841" height="679" alt="image" src="https://github.com/user-attachments/assets/930d3ce5-d31a-4dbb-9cbc-4a4e9b05e7df" />
+
+Premium Loyal Customers → spike in avg_order_value & avg_quantity
+Frequent Value Buyers → spike in order_frequency
+Promotion-Driven Customers → spike in discount_rate & shipping_ratio
+Core Regular Customers → balanced moderate profile (moderate spike to discount but closer to baseline)
+
+
 ---
 
 ## Interactive Exploration (ipywidgets)
