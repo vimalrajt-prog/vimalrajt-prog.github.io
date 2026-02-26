@@ -93,6 +93,14 @@ Before and After Feature engineering for Discount Rate
 
 <img width="703" height="302" alt="image" src="https://github.com/user-attachments/assets/592d7754-3710-420f-82ab-53bf6e198c4c" />
 
+Discount Sensitivity Vs Spending Behaviour
+
+<img width="543" height="477" alt="image" src="https://github.com/user-attachments/assets/e147ad14-3c6e-4727-b91b-bff54e5d6a42" />
+
+Customer Features Space (Before Clustering)
+
+<img width="625" height="505" alt="image" src="https://github.com/user-attachments/assets/557de715-d0f4-438d-b6e7-524f5c2e87f4" />
+
 ## Modelling
 
 ### Clustering Features Used
@@ -140,6 +148,11 @@ K-Means achieved the most balanced performance across all metrics and produced s
 ### PCA Visualization (2D Projection)
 PCA was used solely to visualize clustering structure (not for training).
 <img width="400" height="278" alt="pca_clusters" src="https://github.com/user-attachments/assets/b0eca97a-13bd-4acf-83be-a00d8241bf7f" />
+
+
+**Cluster Profile Intensity Heat Map**
+
+<img width="655" height="619" alt="image" src="https://github.com/user-attachments/assets/ec0e74ff-2aca-4ee5-b516-5413f74f1901" />
 
 ### Cluster Stability Check
 The K-Means solution was validated for stability across multiple random seeds:
