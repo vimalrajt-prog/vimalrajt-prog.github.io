@@ -95,11 +95,11 @@ Before and After Feature engineering for Discount Rate
 
 Discount Sensitivity Vs Spending Behaviour
 
-<img width="543" height="302" alt="image" src="https://github.com/user-attachments/assets/e147ad14-3c6e-4727-b91b-bff54e5d6a42" />
+<img width="424" height="302" alt="image" src="https://github.com/user-attachments/assets/e147ad14-3c6e-4727-b91b-bff54e5d6a42" />
 
 Customer Features Space (Before Clustering)
 
-<img width="625" height="302" alt="image" src="https://github.com/user-attachments/assets/557de715-d0f4-438d-b6e7-524f5c2e87f4" />
+<img width="424" height="302" alt="image" src="https://github.com/user-attachments/assets/557de715-d0f4-438d-b6e7-524f5c2e87f4" />
 
 ## Modelling
 
@@ -152,7 +152,7 @@ PCA was used solely to visualize clustering structure (not for training).
 
 **Cluster Profile Intensity Heat Map**
 
-<img width="655" height="302" alt="image" src="https://github.com/user-attachments/assets/ec0e74ff-2aca-4ee5-b516-5413f74f1901" />
+<img width="424" height="302" alt="image" src="https://github.com/user-attachments/assets/ec0e74ff-2aca-4ee5-b516-5413f74f1901" />
 
 ### Cluster Stability Check
 The K-Means solution was validated for stability across multiple random seeds:
