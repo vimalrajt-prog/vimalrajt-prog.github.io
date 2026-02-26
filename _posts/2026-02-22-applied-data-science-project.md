@@ -85,6 +85,13 @@ This work supports the team’s overall project direction by providing a data-dr
 <img width="424" height="319" alt="corr_heatmap" src="https://github.com/user-attachments/assets/6d0b3f78-f96f-4907-a57a-5afdfa31cd32" />
 
 ---
+Before and After Feature engineering for Total Spend
+
+<img width="741" height="259" alt="image" src="https://github.com/user-attachments/assets/8ec06ccf-aecc-4384-b6d6-56aea542ea59" />
+
+Before and After Feature engineering for Discount Rate
+
+<img width="703" height="302" alt="image" src="https://github.com/user-attachments/assets/592d7754-3710-420f-82ab-53bf6e198c4c" />
 
 ## Modelling
 
@@ -167,19 +174,21 @@ This confirms the segmentation is robust and not sensitive to centroid initializ
 
 The final solution produced **four distinct customer segments**:
 
-1. **High-Value Loyal Customers**  
+<img width="912" height="198" alt="image" src="https://github.com/user-attachments/assets/035311b0-548c-45b3-a81b-3008e0b13137" />
+
+1. **Premium Loyal Customers**  
    - High average order value, strong spending, low discount dependence  
    - Strategy: Loyalty programs, VIP perks, personalized recommendations
 
-2. **Discount-Sensitive Shoppers**  
+2. **Promotion Driven Customers**  
    - Low order value and frequency, highest discount usage  
    - Strategy: Targeted promotions, coupons, free shipping thresholds
 
-3. **Frequent Buyers / Habitual Customers**  
+3. **Frequent Value Buyers / Habitual Customers**  
    - Higher order frequency, steady spend over repeated purchases  
    - Strategy: Bundles, cross-sell, subscriptions, replenishment reminders
 
-4. **Mid-Tier Regular Customers**  
+4. **Core Regular Customers**  
    - Moderate spend and frequency, growth potential  
    - Strategy: Convert to higher value via engagement and threshold offers
 
