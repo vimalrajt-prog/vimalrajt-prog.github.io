@@ -213,10 +213,10 @@ The final solution produced **four distinct customer segments**:
 
 <img width="430" height="310" alt="image" src="https://github.com/user-attachments/assets/930d3ce5-d31a-4dbb-9cbc-4a4e9b05e7df" />
 
-Premium Loyal Customers → spike in avg_order_value & avg_quantity
-Frequent Value Buyers → spike in order_frequency
-Promotion-Driven Customers → spike in discount_rate & shipping_ratio
-Core Regular Customers → balanced moderate profile (moderate spike to discount but closer to baseline)
+- Premium Loyal Customers → spike in avg_order_value & avg_quantity
+- Frequent Value Buyers → spike in order_frequency
+- Promotion-Driven Customers → spike in discount_rate & shipping_ratio
+- Core Regular Customers → balanced moderate profile (moderate spike to discount but closer to baseline)
 
 
 ---
