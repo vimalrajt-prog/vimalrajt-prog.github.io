@@ -211,7 +211,7 @@ The final solution produced **four distinct customer segments**:
 
 **Behavioral Gaps across Customer Segments**
 
-<img width="841" height="679" alt="image" src="https://github.com/user-attachments/assets/930d3ce5-d31a-4dbb-9cbc-4a4e9b05e7df" />
+<img width="430" height="310" alt="image" src="https://github.com/user-attachments/assets/930d3ce5-d31a-4dbb-9cbc-4a4e9b05e7df" />
 
 Premium Loyal Customers → spike in avg_order_value & avg_quantity
 Frequent Value Buyers → spike in order_frequency
