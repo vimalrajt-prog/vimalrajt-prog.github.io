@@ -148,7 +148,6 @@ K-Means achieved the most balanced performance across all metrics and produced s
 ### PCA Visualization (2D Projection)
 PCA was used solely to visualize clustering structure (not for training).
 <img width="400" height="278" alt="pca_clusters" src="https://github.com/user-attachments/assets/b0eca97a-13bd-4acf-83be-a00d8241bf7f" />
-
 Provides: Clear cluster separation,  Stable cluster sizes, Business-interpretable segments 
 
 
