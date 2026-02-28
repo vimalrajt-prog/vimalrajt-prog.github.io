@@ -400,24 +400,12 @@ This project implemented a complete end-to-end customer segmentation pipeline us
 Through systematic evaluation and validation, we derived stable and interpretable customer segments that reflect meaningful differences in purchasing behavior.
 
 ### Key achievements:
-- Constructed customer-level behavioral features capturing spend, frequency, discount sensitivity, and shipping impact
-- Evaluated multiple clustering approaches (K-Means, MiniBatchKMeans, GMM, DBSCAN) using standard internal validation metrics
-- Selected **K-Means** as the final model due to the best balance of performance, interpretability, and stability
-- Confirmed robustness through a stability check with **high ARI consistency (~0.996)**
-- Produced actionable segment-driven recommendations to support targeted marketing strategies and revenue optimization
-
 - Engineered customer-level behavioral features capturing spending intensity, purchase frequency, discount sensitivity, and shipping cost impact.
-
 - Feature engineering improved interpretability and behavioral richness, although it slightly reduced silhouette score due to increased dimensional
-
 - Applied and compared multiple clustering techniques (K-Means, MiniBatchKMeans, Gaussian Mixture Model, DBSCAN) using standard internal validation metrics (Silhouette Score, Davies–Bouldin Index, Calinski–Harabasz Score).
-
 - Selected **K-Means** as the final segmentation model based on optimal balance between performance, interpretability, and computational efficiency.
-
 - Conducted **stability validation** across multiple random seeds, confirming high segmentation robustness (**Average ARI ≈ 0.996**).
-
 - Developed clear, **business-driven cluster interpretations and actionable recommendations** to support targeted marketing, promotion allocation, and revenue optimization.
-
 
 
 ### Overall Summary
