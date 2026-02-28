@@ -395,8 +395,9 @@ Segmentation should:
 ---
 
 ## Conclusion
+This project implemented a complete end-to-end customer segmentation pipeline using Amazon transactional sales data. The workflow followed a structured applied data science approach, including data preparation, behavioral feature engineering, multi-model clustering comparison, stability validation, and business-oriented interpretation.
 
-This project demonstrated an end-to-end customer segmentation workflow using Amazon sales transactions, covering data preparation, feature engineering, clustering model comparison, stability validation, and business interpretation.
+Through systematic evaluation and validation, we derived stable and interpretable customer segments that reflect meaningful differences in purchasing behavior.
 
 ### Key achievements:
 - Constructed customer-level behavioral features capturing spend, frequency, discount sensitivity, and shipping impact
@@ -405,8 +406,32 @@ This project demonstrated an end-to-end customer segmentation workflow using Ama
 - Confirmed robustness through a stability check with **high ARI consistency (~0.996)**
 - Produced actionable segment-driven recommendations to support targeted marketing strategies and revenue optimization
 
+- Engineered customer-level behavioral features capturing spending intensity, purchase frequency, discount sensitivity, and shipping cost impact.
+
+- Feature engineering improved interpretability and behavioral richness, although it slightly reduced silhouette score due to increased dimensional
+
+- Applied and compared multiple clustering techniques (K-Means, MiniBatchKMeans, Gaussian Mixture Model, DBSCAN) using standard internal validation metrics (Silhouette Score, Davies–Bouldin Index, Calinski–Harabasz Score).
+
+- Selected **K-Means** as the final segmentation model based on optimal balance between performance, interpretability, and computational efficiency.
+
+- Conducted **stability validation** across multiple random seeds, confirming high segmentation robustness (**Average ARI ≈ 0.996**).
+
+- Developed clear, **business-driven cluster interpretations and actionable recommendations** to support targeted marketing, promotion allocation, and revenue optimization.
+
+
+
 ### Overall Summary
-The segmentation provides a practical framework for businesses to tailor engagement strategies, allocate promotions more effectively, and improve customer retention outcomes.
+The resulting segmentation framework provides a practical decision-support tool for businesses to:
+
+- Differentiate high-value, loyal, and price-sensitive customers
+- Optimize discount and promotional strategies
+- Allocate marketing resources more effectively
+- Improve long-term customer engagement and retention
+
+While the segmentation is based on transactional behavior alone, it establishes a strong analytical foundation for future enhancements such as time-based behavioral modeling, churn prediction, and customer lifetime value estimation
+
+
+Overall, this project demonstrates the practical application of applied data science techniques in transforming raw transactional data into actionable business intelligence.
 
 ---
 
