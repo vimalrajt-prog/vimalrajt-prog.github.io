@@ -150,9 +150,24 @@ PCA was used solely to visualize clustering structure (not for training).
 <img width="400" height="278" alt="pca_clusters" src="https://github.com/user-attachments/assets/b0eca97a-13bd-4acf-83be-a00d8241bf7f" />
 
 
+Provides: Clear cluster separation,  Stable cluster sizes, Business-interpretable segments 
+
+<img width="546" height="171" alt="image" src="https://github.com/user-attachments/assets/7b28cf9d-81ec-45b1-bbaa-2f2a4a5563ba" />
+
 **Cluster Profile Intensity Heat Map**
 
 <img width="424" height="302" alt="image" src="https://github.com/user-attachments/assets/ec0e74ff-2aca-4ee5-b516-5413f74f1901" />
+
+Provides: segmentation spikes, feature spread and behaviour. 
+
+For example:
+
+Red indicates a high "intensity" or value for that feature, while blue represents lower values.
+
+Cluster 0 (Premium Loyal): Shows a massive "heat spike" in avg_order_value (1487.16). This is the most intense red in the entire map, identifying this group as your primary source of high-ticket revenue.
+
+Order Value Spread: There is a drastic gradient from $93.25 (Cluster 1) to $1487.16 (Cluster 0). This confirms that your "Premium" customers aren't just slightly better; they are spending 16x more per transaction than your bargain hunters.
+
 
 ### Cluster Stability Check
 The K-Means solution was validated for stability across multiple random seeds:
