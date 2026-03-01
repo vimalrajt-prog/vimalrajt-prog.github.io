@@ -113,7 +113,7 @@ This validates the suitability of clustering
 
    
 
-#### Visuals (Sample Images)
+#### 3.3 Visuals (Sample Images)
 - Distribution of Total Amount (order value)
   
 <img width="355" height="228" alt="totalamount_hist" src="https://github.com/user-attachments/assets/64f32f61-d9b2-4ab6-85a0-b3f26a79b72e" />
@@ -148,9 +148,17 @@ Customer Features Space (Before Clustering)
 <img width="424" height="302" alt="image" src="https://github.com/user-attachments/assets/557de715-d0f4-438d-b6e7-524f5c2e87f4" />
 
 
-## Modelling
+### 3.4 Sample Code Snippets Feature Engineering
+#### A. Feature Engineering (to constructed meaningful behavioral features)
+<img width="433" height="198" alt="Feature_Engineering_code_snippet" src="https://github.com/user-attachments/assets/baf1cf2a-4afb-49e9-acb0-1e74f079b712" />
 
-### Clustering Features Used
+#### B. Feature Scaling  (to show correct ML processsing)
+<img width="196" height="171" alt="Feature_scaling_code_snippet" src="https://github.com/user-attachments/assets/8f29b9e5-0a19-4a03-8a9c-179b5191acc7" />
+
+
+## 4 Modelling
+
+### 4.1 Clustering Features Used
 The segmentation used the following scaled customer-level features:
 - log_total_spend
 - avg_order_value
@@ -160,7 +168,7 @@ The segmentation used the following scaled customer-level features:
 - shipping_ratio
 
 
-### Models Compared (4-model evaluation)
+### 4.2 Models Compared (4-model evaluation)
 To align with assessment expectations, four clustering algorithms were evaluated on a representative sample:
 - **K-Means**
 - **MiniBatchKMeans**
@@ -178,7 +186,7 @@ To align with assessment expectations, four clustering algorithms were evaluated
 K-Means achieved the most balanced performance across all metrics and produced stable, interpretable segments suitable for business use.
 
 
-### Selecting K (Number of Clusters)
+### 4.3 Selecting K (Number of Clusters)
 K was selected using:
 - **Elbow Method** (inertia vs k)
   
@@ -188,7 +196,7 @@ K was selected using:
   
 <img width="346" height="220" alt="silhouette_plot" src="https://github.com/user-attachments/assets/0f14d53e-aa7d-47be-a7de-bd4ae369e769" />
 
-### Cluster Stability Check
+### 4.4 Cluster Stability Check
 
 The K-Means solution was validated for stability across multiple random seeds:
 - Internal metrics showed negligible variance (Silhouette/DB/CH)
@@ -203,18 +211,26 @@ The K-Means solution was validated for stability across multiple random seeds:
 
 This confirms the segmentation is robust and not sensitive to centroid initialization.
 
+### 4.5 Sample Code Snippets for modelling
+
+#### A. Multi-Model Comparison (to demonstrate model evaluation)
+
+<img width="290" height="105" alt="multi_model_comparison_code_snippet" src="https://github.com/user-attachments/assets/8f516e20-f30e-40ba-8962-7415253ce1a0" />
+
+#### B. Model Evaluation (to show advanced validation)
+<img width="324" height="147" alt="stability_check_code_snippet" src="https://github.com/user-attachments/assets/dbce2901-7d2a-4895-9b3e-ad01c322100d" />
 ---
 
-## Evaluation
+## 5 Evaluation
 
-### PCA Visualization (2D Projection)
+### 5.1 PCA Visualization (2D Projection)
 
 PCA was used solely to visualize clustering structure (not for training).  Provides, Clear cluster separation,  Stable cluster sizes, Business-interpretable segments 
 
 <img width="400" height="278" alt="pca_clusters" src="https://github.com/user-attachments/assets/b0eca97a-13bd-4acf-83be-a00d8241bf7f" />
 
 
-**Behavioral Gaps across Customer Segments**
+### 5.2 Behavioral Gaps across Customer Segments
 
 <img width="430" height="310" alt="image" src="https://github.com/user-attachments/assets/930d3ce5-d31a-4dbb-9cbc-4a4e9b05e7df" />
 
@@ -224,7 +240,7 @@ PCA was used solely to visualize clustering structure (not for training).  Provi
 - Core Regular Customers → balanced moderate profile (moderate spike to discount but closer to baseline)
 
 
-**Cluster Profile Intensity Heat Map**
+### 5.3 Cluster Profile Intensity Heat Map
 
 <img width="424" height="302" alt="image" src="https://github.com/user-attachments/assets/ec0e74ff-2aca-4ee5-b516-5413f74f1901" />
 
@@ -239,41 +255,25 @@ Cluster 0 (Premium Loyal): Shows a massive "heat spike" in avg_order_value (1487
 Order Value Spread: There is a drastic gradient from $93.25 (Cluster 1) to $1487.16 (Cluster 0). This confirms that your "Premium" customers aren't just slightly better; they are spending 16x more per transaction than your bargain hunters.
 
 
-
-### Code Snippets
-#### A. Feature Engineering (to constructed meaningful behavioral features)
-<img width="433" height="198" alt="Feature_Engineering_code_snippet" src="https://github.com/user-attachments/assets/baf1cf2a-4afb-49e9-acb0-1e74f079b712" />
-
-#### B. Feature Scaling  (to show correct ML processsing)
-<img width="196" height="171" alt="Feature_scaling_code_snippet" src="https://github.com/user-attachments/assets/8f29b9e5-0a19-4a03-8a9c-179b5191acc7" />
-
-#### C. Multi-Model Comparison (to demonstrate model evaluation)
-
-<img width="290" height="105" alt="multi_model_comparison_code_snippet" src="https://github.com/user-attachments/assets/8f516e20-f30e-40ba-8962-7415253ce1a0" />
-
-#### D. Model Evaluation (to show advanced validation)
-<img width="324" height="147" alt="stability_check_code_snippet" src="https://github.com/user-attachments/assets/dbce2901-7d2a-4895-9b3e-ad01c322100d" />
-
-
-## Cluster Interpretation (Business Profiles)
+## 6 Cluster Interpretation (Business Profiles)
 
 The final solution produced **four distinct customer segments**:
 
 <img width="912" height="198" alt="image" src="https://github.com/user-attachments/assets/035311b0-548c-45b3-a81b-3008e0b13137" />
 
-1. **Premium Loyal Customers**  
+**1. Premium Loyal Customers**  
    - High average order value, strong spending, low discount dependence  
    - Strategy: Loyalty programs, VIP perks, personalized recommendations
 
-2. **Promotion Driven Customers**  
+**2. Promotion Driven Customers**  
    - Low order value and frequency, highest discount usage  
    - Strategy: Targeted promotions, coupons, free shipping thresholds
 
-3. **Frequent Value Buyers / Habitual Customers**  
+**3. Frequent Value Buyers / Habitual Customers**  
    - Higher order frequency, steady spend over repeated purchases  
    - Strategy: Bundles, cross-sell, subscriptions, replenishment reminders
 
-4. **Core Regular Customers**  
+**4. Core Regular Customers**  
    - Moderate spend and frequency, growth potential  
    - Strategy: Convert to higher value via engagement and threshold offers
 
@@ -284,22 +284,25 @@ The final solution produced **four distinct customer segments**:
 
 ---
 
-## Interactive Exploration (ipywidgets)
+## 7 Interactive Exploration (ipywidgets)
 
 An interactive widget interface was developed to:
 - explore dynamically to display summary statistics and visual comparisons between cluster-level and overall feature distributions, supporting explainability and stakeholder interpretation.
-- Filter customers by spend bucket and discount usage
 
 <img width="337" height="149" alt="widgets_clusterview" src="https://github.com/user-attachments/assets/53e65db9-08e2-4f9d-9749-1f3f56f97828" />
 
+- Filter customers by spend bucket and discount usage
+  
 <img width="462" height="158" alt="widgets_spendbucket" src="https://github.com/user-attachments/assets/3a9f9025-4b09-47b3-86db-c4edcca2ed5c" />
 
+- Feature Comparison
+  
 <img width="477" height="248" alt="widgets_clusterview_chart" src="https://github.com/user-attachments/assets/918de556-5ddc-4477-8a5e-a0df43693e76" />
 
 
 ---
 
-## Recommendations and Analysis (Business Insights)
+## 8 Recommendations and Analysis (Business Insights)
 
 Based on the final K-Means segmentation results, four distinct customer behavioral segments were identified. These segments provide actionable guidance for targeted marketing, pricing, and customer engagement strategies.
 
@@ -368,9 +371,9 @@ Overall, the segmentation enables:
 
 ---
 
-## Limitations and Future Work
+## 9 Limitations and Future Work
 
-### Limitations
+### 9.1 Limitations
 1. **No time-based customer behavior modeling**
    - The segmentation is based on aggregated historical behavior and does not include recency-based features (e.g., last purchase date) or seasonality patterns.
 
@@ -387,7 +390,7 @@ Overall, the segmentation enables:
    - Customers may shift between segments over time; the current model reflects a snapshot and may require periodic re-training.
 
 
-### Future Work
+### 9.2 Future Work
 1. **Add time-based features (RFM segmentation)**
    - Incorporate Recency, Frequency, and Monetary features to detect churn risk and customer lifecycle changes.
 
@@ -405,7 +408,7 @@ Overall, the segmentation enables:
 
 ---
 
-## AI Ethics
+## 10 AI Ethics
 The potential data science ethics issues (privacy, fairness, accuracy, accountability, transparency) in our project. 
 
 ### Pricacy and Data Protection:
@@ -457,7 +460,7 @@ Segmentation should:
 
 ---
 
-## Conclusion
+## 11 Conclusion
 This project implemented a complete end-to-end customer segmentation pipeline using Amazon transactional sales data. The workflow followed a structured applied data science approach, including data preparation, behavioral feature engineering, multi-model clustering comparison, stability validation, and business-oriented interpretation.
 
 Through systematic evaluation and validation, we derived stable and interpretable customer segments that reflect meaningful differences in purchasing behavior.
@@ -486,7 +489,7 @@ Overall, this project demonstrates the practical application of applied data sci
 
 ---
 
-## Source Codes and Datasets
+## 12 Source Codes and Datasets
 Refer to the file repository and datasets as follows:
 - [File repository](https://github.com/vimalrajt-prog/itd214_project)
   -  Zip File (Amazon_Sales_Customer_Segmentation.zip)
