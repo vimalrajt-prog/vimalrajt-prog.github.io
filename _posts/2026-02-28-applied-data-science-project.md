@@ -286,19 +286,20 @@ The final solution produced **four distinct customer segments**:
 
 ## 7 Interactive Exploration (ipywidgets)
 
-An interactive widget interface was developed to:
-- explore dynamically to display summary statistics and visual comparisons between cluster-level and overall feature distributions, supporting explainability and stakeholder interpretation.
+Interactive widget interface were developed as follows:
+
+### 7.1 Cluster Explorer Widget
+- To explore dynamically to display summary statistics and visual comparisons between cluster-level and overall feature distributions, supporting explainability and stakeholder interpretation.
 
 <img width="337" height="149" alt="widgets_clusterview" src="https://github.com/user-attachments/assets/53e65db9-08e2-4f9d-9749-1f3f56f97828" />
 
-- Filter customers by spend bucket and discount usage
-  
-<img width="462" height="158" alt="widgets_spendbucket" src="https://github.com/user-attachments/assets/3a9f9025-4b09-47b3-86db-c4edcca2ed5c" />
-
-- Feature Comparison
-  
 <img width="477" height="248" alt="widgets_clusterview_chart" src="https://github.com/user-attachments/assets/918de556-5ddc-4477-8a5e-a0df43693e76" />
 
+### 7.2 Spend Bucket + Discount Filter Widget
+
+- To filter customers by spend bucket and discount usage  
+
+<img width="462" height="158" alt="widgets_spendbucket" src="https://github.com/user-attachments/assets/3a9f9025-4b09-47b3-86db-c4edcca2ed5c" />
 
 ---
 
@@ -306,7 +307,9 @@ An interactive widget interface was developed to:
 
 Based on the final K-Means segmentation results, four distinct customer behavioral segments were identified. These segments provide actionable guidance for targeted marketing, pricing, and customer engagement strategies.
 
-### Segment 1: Premium Loyal Customers
+### 8.1 Segmentaions Details
+
+#### Segment 1: Premium Loyal Customers
 **Behavioral Signals**
 - Highest average order value and high average quantity per order  
 - Low discount reliance and minimal shipping sensitivity  
@@ -362,7 +365,7 @@ A stable “middle” segment with strong potential to be upgraded into higher v
 - Improve customer experience (delivery transparency, service responsiveness)
 
 
-#### Strategic Impact Summary
+### 8.2 Strategic Impact Summary
 Overall, the segmentation enables:
 - **More efficient marketing allocation** (right offer to the right segment)
 - **Reduced unnecessary discounting** (protect margin by targeting promotions)
@@ -411,13 +414,13 @@ Overall, the segmentation enables:
 ## 10 AI Ethics
 The potential data science ethics issues (privacy, fairness, accuracy, accountability, transparency) in our project. 
 
-### Pricacy and Data Protection:
+### 10.1 Pricacy and Data Protection:
 - Customer data is anonymized and analyzed at ID-level.
 - No personally identifiable information (PII) is used.
 - Segmentation is behavior-based, not identity-based.
 - No sensitive attributes (race, gender, religion) are included.
 
-### Fairness and Bias:
+### 10.2 Fairness and Bias:
 The model segments customers based on purchasing behavior.
 Historical purchasing data may reflect:
 - Income inequality
@@ -431,12 +434,12 @@ Low-spend customers could be unfairly deprioritized in marketing strategies.
 Segmentation should support service personalization, not discrimination.
 
 
-### Transparency and Explainability.
+### 10.3 Transparency and Explainability.
 - K-Means clustering is interpretable.
 - Feature contributions are transparent (log_total_spend, frequency, etc.).
 - Business labels are derived from measurable behavioral patterns.
 
-### Accuracy and Model Realiability.
+### 10.4 Accuracy and Model Realiability.
 Although clustering is unsupervised, reliability was validated through:
 - Multi-model comparison (K-Means, MiniBatch, GMM, DBSCAN)
 - Multiple evaluation metrics (Silhouette, DB, CH)
@@ -451,7 +454,7 @@ This ensures:
 Clustering does not produce "accuracy" like classification models. Instead, reliability is assessed through stability and internal validation metrics.
 
 
-### Responsible Business Use
+### 10.5 Responsible Business Use
 Segmentation should:
 - Enhance customer experience
 - Improve marketing efficiency
@@ -465,7 +468,7 @@ This project implemented a complete end-to-end customer segmentation pipeline us
 
 Through systematic evaluation and validation, we derived stable and interpretable customer segments that reflect meaningful differences in purchasing behavior.
 
-### Key achievements:
+### 11.1 Key achievements:
 - Engineered customer-level behavioral features capturing spending intensity, purchase frequency, discount sensitivity, and shipping cost impact.
 - Feature engineering improved interpretability and behavioral richness, although it slightly reduced silhouette score due to increased dimensional
 - Applied and compared multiple clustering techniques (K-Means, MiniBatchKMeans, Gaussian Mixture Model, DBSCAN) using standard internal validation metrics (Silhouette Score, Davies–Bouldin Index, Calinski–Harabasz Score).
@@ -474,7 +477,7 @@ Through systematic evaluation and validation, we derived stable and interpretabl
 - Developed clear, **business-driven cluster interpretations and actionable recommendations** to support targeted marketing, promotion allocation, and revenue optimization.
 
 
-### Overall Summary
+### 11.2 Overall Summary
 The resulting segmentation framework provides a practical decision-support tool for businesses to:
 
 - Differentiate high-value, loyal, and price-sensitive customers
