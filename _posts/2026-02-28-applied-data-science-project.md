@@ -4,19 +4,39 @@ author: Vimalraj T
 title: "Applied Data Science Project Documentation"
 categories: ITD214
 ---
-## Project Background
-E-commerce platforms serve customers with diverse purchasing behaviors. Treating all customers uniformly limits the effectiveness of promotions, pricing, and retention programs.  
-This project applies **customer segmentation** to identify distinct purchasing profiles using Amazon e-commerce sales transactions and translate them into actionable business strategies.
+## 1 Project Background
 
-**Business Goal:**  
-Our team's overall business goal is "To analyze customer purchasing behavior, satisfaction distribution, and transactional drivers in Amazon e-commerce data to produce actionable insights that support targeted marketing strategies and revenue optimization."
+### 1.1 Business Context
 
-**My Individual Objective (Objective 1 – Customer Segmentation):**  
-To segment customers based on purchasing behavior using transactional and monetary features derived from sales data, and identify distinct customer profiles to support targeted marketing, pricing, and customer engagement strategies.
+In highly competitive e-commerce environments, customer purchasing behavior varies significantly across individuals. Some customers demonstrate consistent high spending and loyalty, while others purchase only during promotions or exhibit strong sensitivity to delivery costs.
+
+Organizations that treat all customers uniformly risk:
+- Over-discounting premium customers
+- Under-engaging high-frequency buyers
+- Misallocating marketing budgets
+- Failing to identify long-term revenue contributors
+
+To address this challenge, behavioral segmentation is required.
+
+### 1.2 Business Goal
+Our team’s overall business goal is “To analyze customer purchasing behavior, satisfaction distribution, and transactional drivers in Amazon e-commerce data to produce actionable insights that support targeted marketing strategies and revenue optimization.”
+
+### 1.3 Business Objective
+
+The objective of this project (my individual objective) is to:
+
+Develop a robust customer segmentation framework using transactional purchasing data and derive actionable insights to support targeted marketing and revenue optimization.
+
+This objective aligns with our overal busienss goal and with applied data science competencies including:
+
+- Data preparation and transformation
+- Unsupervised machine learning
+- Model evaluation and validation
+- Business interpretation
 
 ---
 
-## Work Accomplished
+## 2 Work Accomplished
 I successfully:
 - Conducted exploratory data analysis (EDA) and data quality checks on the sales dataset (~100K orders)
 - Cleaned and validated numeric and categorical fields (quantity, price, discount, shipping, total amount)
@@ -36,36 +56,62 @@ I successfully:
 - Interpreted clusters into business-friendly segments and provided recommendations
 - Implemented **ipywidgets** for interactive exploration (cluster explorer, spend bucket filter, discount filter)
 
-This work supports the team’s overall project direction by providing a data-driven segmentation framework for decision support.
+This work supports the team’s overall goal by providing a data-driven segmentation framework for decision support and demonstrates both technical rigor and business reasoning.
 
 ---
 
-## Data Preparation
+## 3 Data Preparation
 
-### Dataset Overview
-- Dataset: Amazon Sales transactional data  
-- Granularity: Order-level → aggregated to customer-level  
-- Key fields used:
-  - Quantity, UnitPrice, Discount, ShippingCost, TotalAmount
-  - Category, PaymentMethod, City/State/Country (for optional profiling)
+### 3.1 Dataset Overview
 
-### Preprocessing Steps
-1. **Data Cleaning & Validation**
+The Amazon Sales dataset (~100K records) includes:
+- OrderID
+- CustomerID
+- Quantity
+- UnitPrice
+- Discount
+- ShippingCost
+- Payment Method
+- TotalAmount
+- Category and Location (City/State/Country)
+
+Since segmentation targets customers rather than transactions, data was **aggregated to the customer** level.
+
+### 3.2 Preprocessing Steps
+#### 3.2.1 Data Cleaning & Validation
    - Converted numeric fields (quantity, unit price, discount, shipping cost, total amount)
    - Removed invalid rows (negative values, invalid discount bounds, missing critical values)
    - Outlier scan to identify extreme total amount values
 
-2. **Customer-Level Aggregation**
-   - total_orders, total_spend, avg_order_value, avg_quantity
-   - discount_rate, shipping_ratio
+#### 3.2.2 Customer-Level Aggregation
+   - Total Orders, Total Spend, Average Order Value, Average Quantity
+   - Dscount Rate, Shipping Ration
 
-3. **Feature Engineering Enhancements**
+#### 3.2.3 Feature Engineering Enhancements
    - `log_total_spend` to reduce skew
-   - `spend_bucket` (quartile-based) for interpretability
-   - `discount_user_flag` to capture promotion sensitivity
+     Log transformation was applied to stabilize variance and prevent extreme spenders from dominating Euclidean distance calculations.
+Insight: Feature transformation ensures clustering reflects behavioral differences rather than magnitude distortions.
 
-4. **Feature Scaling**
-   - StandardScaler applied to clustering input features
+   - `spend_bucket` (quartile-based) for interpretability
+      To group the customers based on the spending.
+     
+   - `discount_user_flag` to capture promotion sensitivity
+      A binary discount_flag was introduced:
+         - 0 → No discount usage
+         - 1 → Uses discount
+     This improves interpretability and enables clearer identification of promotion-driven customers.
+
+#### 3.2.4 Feature Scaling
+   - Since clustering relies on distance-based calculations, features were standardized using StandardScaler to ensure balanced contribution across dimensions.
+
+#### 3.2.5 Pre-Segmentation Structure
+Principal Component Analysis (PCA) was conducted before clustering.
+
+Approximately 64% of variance was captured in the first two components, indicating structured behavioral patterns existed prior to segmentation.
+
+This validates the suitability of clustering
+
+   
 
 #### Visuals (Sample Images)
 - Distribution of Total Amount (order value)
@@ -101,6 +147,7 @@ Customer Features Space (Before Clustering)
 
 <img width="424" height="302" alt="image" src="https://github.com/user-attachments/assets/557de715-d0f4-438d-b6e7-524f5c2e87f4" />
 
+
 ## Modelling
 
 ### Clustering Features Used
@@ -111,16 +158,6 @@ The segmentation used the following scaled customer-level features:
 - avg_quantity
 - discount_rate
 - shipping_ratio
-
-### Selecting K (Number of Clusters)
-K was selected using:
-- **Elbow Method** (inertia vs k)
-  
-  <img width="410" height="278" alt="elbow_plot" src="https://github.com/user-attachments/assets/d8d06bfd-727a-4b5d-81c6-03e5f2f738eb" />
-
-- **Silhouette Score** (cluster separation quality)
-  
-<img width="346" height="220" alt="silhouette_plot" src="https://github.com/user-attachments/assets/0f14d53e-aa7d-47be-a7de-bd4ae369e769" />
 
 
 ### Models Compared (4-model evaluation)
@@ -137,9 +174,34 @@ To align with assessment expectations, four clustering algorithms were evaluated
 
 <img width="426" height="110" alt="model_compare_chart" src="https://github.com/user-attachments/assets/e28ea880-0e14-4cea-9732-d813c705a0ea" />
 
-
 **Best Performer: K-Means**  
 K-Means achieved the most balanced performance across all metrics and produced stable, interpretable segments suitable for business use.
+
+
+### Selecting K (Number of Clusters)
+K was selected using:
+- **Elbow Method** (inertia vs k)
+  
+  <img width="410" height="278" alt="elbow_plot" src="https://github.com/user-attachments/assets/d8d06bfd-727a-4b5d-81c6-03e5f2f738eb" />
+
+- **Silhouette Score** (cluster separation quality)
+  
+<img width="346" height="220" alt="silhouette_plot" src="https://github.com/user-attachments/assets/0f14d53e-aa7d-47be-a7de-bd4ae369e769" />
+
+### Cluster Stability Check
+
+The K-Means solution was validated for stability across multiple random seeds:
+- Internal metrics showed negligible variance (Silhouette/DB/CH)
+- ARI results were near perfect, indicating consistent cluster assignments across runs
+
+**Result Summary**
+- Mean ARI ≈ 0.996  
+- Min ARI ≈ 0.990  
+- Max ARI = 1.000  
+
+<img width="403" height="221" alt="stability_check" src="https://github.com/user-attachments/assets/36c9f60d-db69-4c6b-a3bd-1962ecbeee6f" />
+
+This confirms the segmentation is robust and not sensitive to centroid initialization.
 
 ---
 
@@ -150,6 +212,16 @@ K-Means achieved the most balanced performance across all metrics and produced s
 PCA was used solely to visualize clustering structure (not for training).  Provides, Clear cluster separation,  Stable cluster sizes, Business-interpretable segments 
 
 <img width="400" height="278" alt="pca_clusters" src="https://github.com/user-attachments/assets/b0eca97a-13bd-4acf-83be-a00d8241bf7f" />
+
+
+**Behavioral Gaps across Customer Segments**
+
+<img width="430" height="310" alt="image" src="https://github.com/user-attachments/assets/930d3ce5-d31a-4dbb-9cbc-4a4e9b05e7df" />
+
+- Premium Loyal Customers → spike in avg_order_value & avg_quantity
+- Frequent Value Buyers → spike in order_frequency
+- Promotion-Driven Customers → spike in discount_rate & shipping_ratio
+- Core Regular Customers → balanced moderate profile (moderate spike to discount but closer to baseline)
 
 
 **Cluster Profile Intensity Heat Map**
@@ -167,19 +239,6 @@ Cluster 0 (Premium Loyal): Shows a massive "heat spike" in avg_order_value (1487
 Order Value Spread: There is a drastic gradient from $93.25 (Cluster 1) to $1487.16 (Cluster 0). This confirms that your "Premium" customers aren't just slightly better; they are spending 16x more per transaction than your bargain hunters.
 
 
-### Cluster Stability Check
-The K-Means solution was validated for stability across multiple random seeds:
-- Internal metrics showed negligible variance (Silhouette/DB/CH)
-- ARI results were near perfect, indicating consistent cluster assignments across runs
-
-**Result Summary**
-- Mean ARI ≈ 0.996  
-- Min ARI ≈ 0.990  
-- Max ARI = 1.000  
-
-<img width="403" height="221" alt="stability_check" src="https://github.com/user-attachments/assets/36c9f60d-db69-4c6b-a3bd-1962ecbeee6f" />
-
-This confirms the segmentation is robust and not sensitive to centroid initialization.
 
 ### Code Snippets
 #### A. Feature Engineering (to constructed meaningful behavioral features)
@@ -221,15 +280,6 @@ The final solution produced **four distinct customer segments**:
 <img width="499" height="282" alt="cluster_profile_bar" src="https://github.com/user-attachments/assets/722f9bb8-2fc0-46e5-909a-b9b9e09f4f3c" />
 
 <img width="482" height="259" alt="spend_bucket_by_cluster" src="https://github.com/user-attachments/assets/e07b53c6-b726-4219-bec8-4c1a176fc19a" />
-
-**Behavioral Gaps across Customer Segments**
-
-<img width="430" height="310" alt="image" src="https://github.com/user-attachments/assets/930d3ce5-d31a-4dbb-9cbc-4a4e9b05e7df" />
-
-- Premium Loyal Customers → spike in avg_order_value & avg_quantity
-- Frequent Value Buyers → spike in order_frequency
-- Promotion-Driven Customers → spike in discount_rate & shipping_ratio
-- Core Regular Customers → balanced moderate profile (moderate spike to discount but closer to baseline)
 
 
 ---
